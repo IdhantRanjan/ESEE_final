@@ -1,0 +1,21 @@
+EXIOBASE VALIDATION REPORT
+==================================================
+Validation time: 2026-01-01 03:33:29
+Location: /Users/idhantranjan/ESEE Research/data/raw/exiobase3
+
+Total files: 41
+
+Key files:
+  A.txt: 1 file(s)
+    - A.txt
+  Y.txt: 5 file(s)
+    - Y.txt
+    - S_Y.txt
+    - F_Y.txt
+  F.txt: 2 file(s)
+    - F.txt
+    - F.txt
+
+ISSUES:
+  - Matrix file appears non-numeric
+  - Found 9801 NaN values in first 1000 rows

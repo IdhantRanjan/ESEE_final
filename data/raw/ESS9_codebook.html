@@ -1,0 +1,3329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        html {
+            max-width: 70ch;
+            /* larger spacing on larger screens, very small spacing on tiny screens */
+            padding: calc(1vmin + .5rem);
+            /* shorthand for margin-left/margin-right */
+            margin-inline: auto;
+            /* fluid sizing: https://frontaid.io/blog/fluid-typography-2d-css-locks-clamp/ */
+            font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
+            /* use system font stack: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family */
+            font-family: system-ui;
+            --font-size-x-small: 0.8rem;
+            --font-size-small: 1rem;
+            --font-size-medium: 1.3rem;
+            --font-size-large: 1.65rem;
+            --font-size-x-large: 2.4rem;
+            --space-xx-small: 0.25rem;
+            --space-x-small: 0.5rem;
+            --space-small: 1rem;
+            --space-medium: 1.5rem;
+            --space-large: 3rem;
+            --space-x-large: 4rem;
+            --space-xx-large: 6rem;
+            --space-xxx-large: 8rem;
+            --divider-line: 1px dashed var(--color-light-gray);
+            --outline-width: 3px;
+        }
+
+        /* increase line-height for everything except headings */
+        body :not(:is(h1, h2, h3, h4, h5, h6)) {
+            line-height: 1.75;
+        }
+
+        /*
+        .var-header {
+            position: sticky;
+            top: 10px;
+        } */
+        .variable-meta-string {
+            margin-top: var(--space-small);
+            margin-bottom: 0;
+            font-size: var(--font-size-x-small);
+        }
+
+        .data-table {
+            margin-left: 0;
+            margin-bottom: 0;
+            margin-top: var(--space-small);
+            margin-left: var(--space-small);
+            font-size: var(--font-size-x-small);
+            display: block;
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        .data-table table {
+            border-collapse: collapse;
+            font-size: var(--font-size-x-small);
+        }
+
+        .data-table thead {
+            border-bottom: 2px solid var(--color-black);
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+
+        .data-table th {
+            padding-bottom: var(--space-x-small);
+            padding-right: var(--space-small);
+            padding-bottom: var(--space-xx-small);
+            padding-top: var(--space-xx-small);
+            text-align: left;
+        }
+
+    </style>
+    <title>Codebook</title>
+</head>
+
+
+
+
+
+<body>
+    <h1>Codebook</h1>
+    <h2>Datafile</h2>
+    
+        
+    <h3>ESS9 - test data (MTMM), edition 3.0</h3>
+    
+        
+        <p><a href="https://doi.org/10.21338/ess9mtmme03" target=”_blank”>doi:10.21338/ess9mtmme03</a></p>
+    
+        
+    
+
+    <h2>Variables</h2>
+    <ul class="toc-list">
+        
+        
+        <li>
+            <a href="#name">
+                <span>name</span>
+                
+                <span> - Title of dataset</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#essround">
+                <span>essround</span>
+                
+                <span> - ESS round</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#edition">
+                <span>edition</span>
+                
+                <span> - Edition</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#proddate">
+                <span>proddate</span>
+                
+                <span> - Production date</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#idno">
+                <span>idno</span>
+                
+                <span> - Respondent's identification number</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#cntry">
+                <span>cntry</span>
+                
+                <span> - Country</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#admdw">
+                <span>admdw</span>
+                
+                <span> - Administration of how democracy works questions</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhc32">
+                <span>testhc32</span>
+                
+                <span> - In country governing parties are punished in elections when they have done a bad job</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhc33">
+                <span>testhc33</span>
+                
+                <span> - In country the government protects citizens against poverty</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhc34">
+                <span>testhc34</span>
+                
+                <span> - In country the government explains its decisions to voters</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhc35">
+                <span>testhc35</span>
+                
+                <span> - In country governing parties are punished in elections when they have done a bad job</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhc36">
+                <span>testhc36</span>
+                
+                <span> - In country the government protects citizens against poverty</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhc37">
+                <span>testhc37</span>
+                
+                <span> - In country the government explains its decisions to voters</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhc38">
+                <span>testhc38</span>
+                
+                <span> - In country governing parties are punished in elections when they have done a bad job</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhc39">
+                <span>testhc39</span>
+                
+                <span> - In country the government protects citizens against poverty</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhc40">
+                <span>testhc40</span>
+                
+                <span> - In country the government explains its decisions to voters</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhi1">
+                <span>testhi1</span>
+                
+                <span> - In country governing parties are punished in elections when they have done a bad job</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhi2">
+                <span>testhi2</span>
+                
+                <span> - In country the government protects citizens against poverty</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhi3">
+                <span>testhi3</span>
+                
+                <span> - In country the government explains its decisions to voters</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhi4">
+                <span>testhi4</span>
+                
+                <span> - In country governing parties are punished in elections when they have done a bad job</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhi5">
+                <span>testhi5</span>
+                
+                <span> - In country the government protects citizens against poverty</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhi6">
+                <span>testhi6</span>
+                
+                <span> - In country the government explains its decisions to voters</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhi7">
+                <span>testhi7</span>
+                
+                <span> - In country governing parties are punished in elections when they have done a bad job</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhi8">
+                <span>testhi8</span>
+                
+                <span> - In country the government protects citizens against poverty</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#testhi9">
+                <span>testhi9</span>
+                
+                <span> - In country the government explains its decisions to voters</span>
+                
+            </a>
+        </li>
+        
+
+    </ul>
+
+    
+    
+    <div>
+        <h3 id="name">name </h3>
+        
+            
+                <div>Title of dataset</div>
+            
+            
+            
+            
+            
+        
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="essround">essround </h3>
+        
+            
+                <div>ESS round</div>
+            
+            
+            
+            
+            
+        
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="edition">edition </h3>
+        
+            
+                <div>Edition</div>
+            
+            
+            
+            
+            
+        
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="proddate">proddate </h3>
+        
+            
+                <div>Production date</div>
+            
+            
+            
+            
+            
+        
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="idno">idno </h3>
+        
+            
+                <div>Respondent's identification number</div>
+            
+            
+            
+            
+            
+        
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="cntry">cntry </h3>
+        
+            
+                <div>Country</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">AL</td>
+                            
+                            <td>Albania</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AT</td>
+                            
+                            <td>Austria</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BE</td>
+                            
+                            <td>Belgium</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BG</td>
+                            
+                            <td>Bulgaria</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CH</td>
+                            
+                            <td>Switzerland</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CY</td>
+                            
+                            <td>Cyprus</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CZ</td>
+                            
+                            <td>Czechia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DE</td>
+                            
+                            <td>Germany</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DK</td>
+                            
+                            <td>Denmark</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">EE</td>
+                            
+                            <td>Estonia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ES</td>
+                            
+                            <td>Spain</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FI</td>
+                            
+                            <td>Finland</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FR</td>
+                            
+                            <td>France</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GB</td>
+                            
+                            <td>United Kingdom</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GE</td>
+                            
+                            <td>Georgia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GR</td>
+                            
+                            <td>Greece</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HR</td>
+                            
+                            <td>Croatia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HU</td>
+                            
+                            <td>Hungary</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IE</td>
+                            
+                            <td>Ireland</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IS</td>
+                            
+                            <td>Iceland</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IL</td>
+                            
+                            <td>Israel</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IT</td>
+                            
+                            <td>Italy</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LT</td>
+                            
+                            <td>Lithuania</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LU</td>
+                            
+                            <td>Luxembourg</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LV</td>
+                            
+                            <td>Latvia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ME</td>
+                            
+                            <td>Montenegro</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MK</td>
+                            
+                            <td>North Macedonia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NL</td>
+                            
+                            <td>Netherlands</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NO</td>
+                            
+                            <td>Norway</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PL</td>
+                            
+                            <td>Poland</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PT</td>
+                            
+                            <td>Portugal</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">RO</td>
+                            
+                            <td>Romania</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">RS</td>
+                            
+                            <td>Serbia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">RU</td>
+                            
+                            <td>Russian Federation</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SE</td>
+                            
+                            <td>Sweden</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SI</td>
+                            
+                            <td>Slovenia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SK</td>
+                            
+                            <td>Slovakia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TR</td>
+                            
+                            <td>Turkey</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">UA</td>
+                            
+                            <td>Ukraine</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">XK</td>
+                            
+                            <td>Kosovo</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="admdw">admdw </h3>
+        
+            
+                <div>Administration of how democracy works questions</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Group 1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>Group 2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>Group 3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>Not available*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhc32">testhc32 </h3>
+        
+            
+                <div>In country governing parties are punished in elections when they have done a bad job</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Does not apply at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">10</td>
+                            
+                            <td>Applies completely</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhc33">testhc33 </h3>
+        
+            
+                <div>In country the government protects citizens against poverty</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Does not apply at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">10</td>
+                            
+                            <td>Applies completely</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhc34">testhc34 </h3>
+        
+            
+                <div>In country the government explains its decisions to voters</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Does not apply at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">10</td>
+                            
+                            <td>Applies completely</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhc35">testhc35 </h3>
+        
+            
+                <div>In country governing parties are punished in elections when they have done a bad job</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>The governing parties are not punished at all in elections when they have done a bad job</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">10</td>
+                            
+                            <td>The governing parties are punished completely in elections when they have done a bad job</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhc36">testhc36 </h3>
+        
+            
+                <div>In country the government protects citizens against poverty</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>The government does not protect citizens against poverty at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">10</td>
+                            
+                            <td>The government protects citizens against poverty completely</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhc37">testhc37 </h3>
+        
+            
+                <div>In country the government explains its decisions to voters</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>The government does not explain its decisions to voters at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">10</td>
+                            
+                            <td>The government explains its decisions to voters completely</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhc38">testhc38 </h3>
+        
+            
+                <div>In country governing parties are punished in elections when they have done a bad job</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>The governing parties are not punished at all in elections when they have done a bad job</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>The governing parties are punished in elections when they have done a bad job</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhc39">testhc39 </h3>
+        
+            
+                <div>In country the government protects citizens against poverty</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>The government does not protect citizens against poverty at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>The government protects citizens against poverty</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhc40">testhc40 </h3>
+        
+            
+                <div>In country the government explains its decisions to voters</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>The government does not explain its decisions to voters at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>The government explains its decisions to voters</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhi1">testhi1 </h3>
+        
+            
+                <div>In country governing parties are punished in elections when they have done a bad job</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>The governing parties are not punished at all in elections when they have done a bad job</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">10</td>
+                            
+                            <td>The governing parties are punished completely in elections when they have done a bad job</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhi2">testhi2 </h3>
+        
+            
+                <div>In country the government protects citizens against poverty</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>The government does not protect citizens against poverty at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">10</td>
+                            
+                            <td>The government protects citizens against poverty completely</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhi3">testhi3 </h3>
+        
+            
+                <div>In country the government explains its decisions to voters</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>The government does not explain its decisions to voters at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">10</td>
+                            
+                            <td>The government explains its decisions to voters completely</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhi4">testhi4 </h3>
+        
+            
+                <div>In country governing parties are punished in elections when they have done a bad job</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>The governing parties are not punished at all in elections when they have done a bad job</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>The governing parties are punished in elections when they have done a bad job</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhi5">testhi5 </h3>
+        
+            
+                <div>In country the government protects citizens against poverty</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>The government does not protect citizens against poverty at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>The government protects citizens against poverty</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhi6">testhi6 </h3>
+        
+            
+                <div>In country the government explains its decisions to voters</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>The government does not explain its decisions to voters at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>The government explains its decisions to voters</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhi7">testhi7 </h3>
+        
+            
+                <div>In country governing parties are punished in elections when they have done a bad job</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Does not apply at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">10</td>
+                            
+                            <td>Applies completely</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhi8">testhi8 </h3>
+        
+            
+                <div>In country the government protects citizens against poverty</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Does not apply at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">10</td>
+                            
+                            <td>Applies completely</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="testhi9">testhi9 </h3>
+        
+            
+                <div>In country the government explains its decisions to voters</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Does not apply at all</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>4</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>5</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">6</td>
+                            
+                            <td>6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">7</td>
+                            
+                            <td>7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">10</td>
+                            
+                            <td>Applies completely</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">66</td>
+                            
+                            <td>Not applicable*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">77</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">88</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">99</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+</body>
+
+</html>

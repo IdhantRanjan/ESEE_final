@@ -1,0 +1,14 @@
+EUROSTAT EMPLOYMENT VALIDATION REPORT
+==================================================
+Validation time: 2026-01-01 03:33:27
+Location: /Users/idhantranjan/ESEE Research/data/raw/eurostat_employment_SYNTHETIC.csv
+Source: synthetic
+
+Rows: 108
+Years: 2020, 2021, 2022, 2023
+Countries: 27
+Complete time series: 27/27
+Value range: 220 - 40418
+
+ISSUES:
+  - WARNING: Using synthetic data, not real Eurostat data

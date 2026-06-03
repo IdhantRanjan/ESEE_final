@@ -1,0 +1,67 @@
+======================================================================
+EUROSTAT EMPLOYMENT DATA VALIDATION
+Generated: 2026-01-01 03:55:46
+======================================================================
+
+FILE INFO:
+Path: /Users/idhantranjan/ESEE Research/data/raw/eurostat_employment.csv
+Size: 35.0 KB
+Rows: 144
+Columns: 23
+
+DATA STRUCTURE:
+Columns:
+  - STRUCTURE (object)
+  - STRUCTURE_ID (object)
+  - STRUCTURE_NAME (object)
+  - freq (object)
+  - Time frequency (object)
+  - indic_em (object)
+  - Employment indicator (object)
+  - sex (object)
+  - Sex (object)
+  - age (object)
+  - Age class (object)
+  - unit (object)
+  - Unit of measure (object)
+  - geo (object)
+  - Geopolitical entity (reporting) (object)
+  - TIME_PERIOD (int64)
+  - Time (float64)
+  - OBS_VALUE (int64)
+  - Observation value (float64)
+  - OBS_FLAG (object)
+  - Observation status (Flag) V2 structure (object)
+  - CONF_STATUS (float64)
+  - Confidentiality status (flag) (float64)
+Key column (values): OBS_VALUE
+
+GEOGRAPHY:
+Total entities: 37
+EU27 countries: 27/27 ✓
+Missing countries: None
+Aggregates found: BA, CH, EA20, EU27_2020, IS, ME, MK, NO, RS, TR
+
+TIME COVERAGE:
+Years: 2020, 2021, 2022, 2023 ✓
+Countries with complete data (all 4 years): 35
+Countries with missing data: 2
+  - BA: missing 2020
+  - ME: missing 2021, 2022, 2023
+
+DATA QUALITY:
+Employment values:
+  Min: 185 thousand persons
+  Max: 199,013 thousand persons
+  Mean: 16,100 thousand persons
+  Missing values: 0 (0.0%)
+  Data type: int64
+  Value range: VALID ✓
+
+OVERALL STATUS:
+✓ VALID
+Issues found:
+  None
+
+READY FOR PREPROCESSING: YES
+======================================================================

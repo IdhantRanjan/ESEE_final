@@ -1,0 +1,124 @@
+ESEE 2026 PROJECT STRUCTURE
+Generated: 2026-01-01 03:54:10
+======================================================================
+📁 PROJECT ROOT
+├── 📁 config/ (0.0 B) (EMPTY)
+├── 📁 data/ (2.8 GB)
+│   ├── 📁 processed/ (0.0 B) (EMPTY)
+│   └── 📁 raw/ (2.8 GB)
+│       ├── 📁 exiobase3/ (2.7 GB)
+│       │   ├── 📁 IOT_2020_pxp/ (1.8 GB)
+│       │   │   ├── 📁 impacts/ (67.4 MB)
+│       │   │   │   ├── 📄 D_cba.txt (14.7 MB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 D_cba_reg.txt (96.5 KB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 D_exp_reg.txt (93.4 KB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 D_imp_reg.txt (94.8 KB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 D_pba.txt (12.0 MB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 D_pba_reg.txt (95.1 KB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 F.txt (12.2 MB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 F_Y.txt (270.3 KB, modified: 2026-01-01)
+│       │   │   │   ├── 📋 file_parameters.json (1.5 KB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 M.txt (15.1 MB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 S.txt (12.5 MB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 S_Y.txt (285.2 KB, modified: 2026-01-01)
+│       │   │   │   └── 📄 unit.txt (13.1 KB, modified: 2026-01-01)
+│       │   │   ├── 📁 satellite/ (407.6 MB)
+│       │   │   │   ├── 📄 D_cba.txt (131.3 MB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 D_cba_reg.txt (766.6 KB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 D_exp_reg.txt (546.1 KB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 D_imp_reg.txt (765.1 KB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 D_pba.txt (43.6 MB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 D_pba_reg.txt (545.9 KB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 F.txt (43.6 MB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 F_Y.txt (889.2 KB, modified: 2026-01-01)
+│       │   │   │   ├── 📋 file_parameters.json (1.5 KB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 M.txt (139.0 MB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 S.txt (45.8 MB, modified: 2026-01-01)
+│       │   │   │   ├── 📄 S_Y.txt (897.1 KB, modified: 2026-01-01)
+│       │   │   │   └── 📄 unit.txt (67.8 KB, modified: 2026-01-01)
+│       │   │   ├── 📄 A.txt (703.9 MB, modified: 2026-01-01)
+│       │   │   ├── 📋 file_parameters.json (644.0 B, modified: 2026-01-01)
+│       │   │   ├── 📄 finaldemands.txt (416.0 B, modified: 2026-01-01)
+│       │   │   ├── 📄 industries.txt (9.6 KB, modified: 2026-01-01)
+│       │   │   ├── 📋 metadata.json (800.0 B, modified: 2026-01-01)
+│       │   │   ├── 📄 products.txt (10.6 KB, modified: 2026-01-01)
+│       │   │   ├── 📄 unit.txt (430.7 KB, modified: 2026-01-01)
+│       │   │   ├── 📄 x.txt (488.0 KB, modified: 2026-01-01)
+│       │   │   ├── 📄 Y.txt (13.3 MB, modified: 2026-01-01)
+│       │   │   └── 📄 Z.txt (688.3 MB, modified: 2026-01-01)
+│       │   └── 📁 MRSUT_2020/ (930.0 MB)
+│       │       ├── 📊 final_demand.csv (19.9 MB, modified: 2026-01-01)
+│       │       ├── 📋 meta.json (74.0 B, modified: 2026-01-01)
+│       │       ├── 📊 supply.csv (302.7 MB, modified: 2026-01-01)
+│       │       ├── 📊 use.csv (606.1 MB, modified: 2026-01-01)
+│       │       └── 📊 value_added.csv (1.3 MB, modified: 2026-01-01)
+│       ├── 📊 ESS10.csv (57.2 MB, modified: 2026-01-01) ✓ KEY FILE
+│       ├── 🌐 ESS10_codebook.html (4.3 MB, modified: 2026-01-01)
+│       ├── 📊 ESS9.csv (4.5 MB, modified: 2026-01-01) ✓ KEY FILE
+│       ├── 🌐 ESS9_codebook.html (100.5 KB, modified: 2026-01-01)
+│       └── 📊 eurostat_employment.csv (35.0 KB, modified: 2026-01-01) ✓ KEY FILE
+├── 📁 notebooks/ (0.0 B) (EMPTY)
+├── 📁 paper/ (0.0 B) (EMPTY)
+├── 📁 results/ (5.7 KB)
+│   ├── 📁 figures/ (0.0 B) (EMPTY)
+│   ├── 📁 logs/ (5.7 KB)
+│   │   ├── 📄 ess10_validation.txt (1014.0 B, modified: 2026-01-01) ✓ KEY FILE
+│   │   ├── 📄 eurostat_download_log.txt (306.0 B, modified: 2026-01-01) ✓ KEY FILE
+│   │   ├── 📄 eurostat_validation.txt (405.0 B, modified: 2026-01-01) ✓ KEY FILE
+│   │   ├── 📄 exiobase_extraction_log.txt (1.8 KB, modified: 2026-01-01) ✓ KEY FILE
+│   │   ├── 📄 exiobase_validation.txt (429.0 B, modified: 2026-01-01) ✓ KEY FILE
+│   │   └── 📄 master_data_report.txt (1.8 KB, modified: 2026-01-01) ✓ KEY FILE
+│   ├── 📁 model_outputs/ (0.0 B) (EMPTY)
+│   └── 📁 tables/ (0.0 B) (EMPTY)
+├── 📁 src/ (78.0 KB)
+│   ├── 📁 utils/ (11.1 KB)
+│   │   └── 🐍 show_project_structure.py (11.1 KB, modified: 2026-01-01)
+│   ├── 🐍 00_setup.py (7.3 KB, modified: 2025-12-22) ✓ KEY FILE
+│   ├── 🐍 01_complete_data_setup.py (44.4 KB, modified: 2026-01-01) ✓ KEY FILE
+│   └── 🐍 01b_validate_eurostat.py (15.1 KB, modified: 2026-01-01) ✓ KEY FILE
+├── 📁 tests/ (0.0 B) (EMPTY)
+├── 📄 .DS_Store (8.0 KB, modified: 2026-01-01)
+├── 📄 .gitignore (837.0 B, modified: 2025-12-22)
+├── 📝 DEVELOPMENT_ROADMAP.md (12.6 KB, modified: 2025-12-22) ✓ KEY FILE
+├── 📝 ESEE2026_PROJECT_CONTEXT.md (14.4 KB, modified: 2025-12-22) ✓ KEY FILE
+├── 📦 ESS10e03_3.zip (10.8 MB, modified: 2025-12-22)
+├── 📦 ESS9MTMMe03.zip (483.3 KB, modified: 2025-12-22)
+├── 📦 IOT_2020_pxp (1).zip (695.1 MB, modified: 2026-01-01)
+├── 📄 lfsi_emp_a__custom_19517699_linear_2_0.csv.gz (1.8 KB, modified: 2026-01-01)
+├── 📦 MRSUT_2020 (1).zip (213.0 MB, modified: 2026-01-01)
+├── 📝 QUICK_START_GUIDE.md (5.8 KB, modified: 2025-12-22)
+├── 📝 README.md (1.5 KB, modified: 2025-12-22) ✓ KEY FILE
+├── 📄 requirements.txt (245.0 B, modified: 2026-01-01)
+└── 📄 setup_env.sh (4.5 KB, modified: 2025-12-22)
+======================================================================
+SUMMARY:
+Total project size: 3.7 GB
+Total files: 69
+Data files: 2.8 GB
+Scripts: 78.0 KB
+Results/logs: 5.7 KB
+Empty directories: 8
+  paper, config, tests, results/tables, results/model_outputs, results/figures, data/processed, notebooks
+
+KEY FILES STATUS:
+✓ DEVELOPMENT_ROADMAP.md (12.6 KB) - DEVELOPMENT_ROADMAP.md
+✓ README.md (1.5 KB) - README.md
+✓ ESEE2026_PROJECT_CONTEXT.md (14.4 KB) - ESEE2026_PROJECT_CONTEXT.md
+✓ exiobase_extraction_log.txt (1.8 KB) - results/logs/exiobase_extraction_log.txt
+✓ ess10_validation.txt (1014.0 B) - results/logs/ess10_validation.txt
+✓ exiobase_validation.txt (429.0 B) - results/logs/exiobase_validation.txt
+✓ master_data_report.txt (1.8 KB) - results/logs/master_data_report.txt
+✓ eurostat_download_log.txt (306.0 B) - results/logs/eurostat_download_log.txt
+✓ eurostat_validation.txt (405.0 B) - results/logs/eurostat_validation.txt
+✓ ESS10.csv (57.2 MB) - data/raw/ESS10.csv
+✓ eurostat_employment.csv (35.0 KB) - data/raw/eurostat_employment.csv
+✓ ESS9.csv (4.5 MB) - data/raw/ESS9.csv
+✓ 01b_validate_eurostat.py (15.1 KB) - src/01b_validate_eurostat.py
+✓ 00_setup.py (7.3 KB) - src/00_setup.py
+✓ 01_complete_data_setup.py (44.4 KB) - src/01_complete_data_setup.py
+
+MISSING/ISSUES:
+  None detected
+
+READY FOR: Data preprocessing (Phase 3)
+======================================================================

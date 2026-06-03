@@ -1,0 +1,9 @@
+EUROSTAT DATA - SYNTHETIC FALLBACK
+==================================================
+Generated: 2026-01-01 03:33:22
+WARNING: This is synthetic data, not real Eurostat data!
+The Eurostat API download failed or was unavailable.
+
+Countries: 27
+Years: ['2020', '2021', '2022', '2023']
+Total observations: 108

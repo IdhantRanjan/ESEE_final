@@ -1,0 +1,46 @@
+ESS10 VALIDATION REPORT
+==================================================
+Validation time: 2026-01-01 03:33:27
+Location: /Users/idhantranjan/ESEE Research/data/raw/ESS10.csv
+
+File size: 57.2 MB
+Rows: 37611
+Columns: 621
+
+CRITICAL COLUMNS:
+  idno (respondent ID): present - 0.0% missing
+  cntry (country code): present - 0.0% missing
+  agea (age): present - 0.0% missing
+  gndr (gender): present - 0.0% missing
+  eisced (education): present - 0.0% missing
+  hinctnta (household income decile): present - 0.0% missing
+  emplrel (employment relation): present - 0.0% missing
+  isco08 (occupation code (for sector)): present - 0.0% missing
+
+POLICY VARIABLES FOUND: 22
+  - pdwrk
+  - hswrk
+  - pdjobev
+  - pdjobyr
+  - wrkctra
+  - wrkac6m
+  - pdwrkp
+  - hswrkp
+  - accwrk
+  - stfmjob
+  - trdawrk
+  - dcsfwrka
+  - wrkhome
+  - wrklong
+  - wrkresp
+  - manwrkpl
+  - wrkextra
+  - c19spwrk
+  - c19mcwrk
+  - mcwrkhom
+
+COUNTRIES: 22
+  GR, BG, IT, CZ, FR, HU, PT, IE, LT, HR, FI, EE, CH, NL, MK, SK, NO, BE, ME, SI
+
+ISSUES:
+  None

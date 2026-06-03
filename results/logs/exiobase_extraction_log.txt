@@ -1,0 +1,61 @@
+EXIOBASE EXTRACTION INVENTORY
+==================================================
+Extraction time: 2026-01-01 03:33:27
+Extraction directory: /Users/idhantranjan/ESEE Research/data/raw/exiobase3
+
+Total files extracted: 41
+
+Key files found:
+  A.txt: 1 file(s)
+    - IOT_2020_pxp/A.txt
+  Y.txt: 5 file(s)
+    - IOT_2020_pxp/Y.txt
+    - IOT_2020_pxp/impacts/S_Y.txt
+    - IOT_2020_pxp/impacts/F_Y.txt
+    ... and 2 more
+  F.txt: 2 file(s)
+    - IOT_2020_pxp/impacts/F.txt
+    - IOT_2020_pxp/satellite/F.txt
+
+All files:
+  IOT_2020_pxp/A.txt
+  IOT_2020_pxp/Y.txt
+  IOT_2020_pxp/Z.txt
+  IOT_2020_pxp/file_parameters.json
+  IOT_2020_pxp/finaldemands.txt
+  IOT_2020_pxp/impacts/D_cba.txt
+  IOT_2020_pxp/impacts/D_cba_reg.txt
+  IOT_2020_pxp/impacts/D_exp_reg.txt
+  IOT_2020_pxp/impacts/D_imp_reg.txt
+  IOT_2020_pxp/impacts/D_pba.txt
+  IOT_2020_pxp/impacts/D_pba_reg.txt
+  IOT_2020_pxp/impacts/F.txt
+  IOT_2020_pxp/impacts/F_Y.txt
+  IOT_2020_pxp/impacts/M.txt
+  IOT_2020_pxp/impacts/S.txt
+  IOT_2020_pxp/impacts/S_Y.txt
+  IOT_2020_pxp/impacts/file_parameters.json
+  IOT_2020_pxp/impacts/unit.txt
+  IOT_2020_pxp/industries.txt
+  IOT_2020_pxp/metadata.json
+  IOT_2020_pxp/products.txt
+  IOT_2020_pxp/satellite/D_cba.txt
+  IOT_2020_pxp/satellite/D_cba_reg.txt
+  IOT_2020_pxp/satellite/D_exp_reg.txt
+  IOT_2020_pxp/satellite/D_imp_reg.txt
+  IOT_2020_pxp/satellite/D_pba.txt
+  IOT_2020_pxp/satellite/D_pba_reg.txt
+  IOT_2020_pxp/satellite/F.txt
+  IOT_2020_pxp/satellite/F_Y.txt
+  IOT_2020_pxp/satellite/M.txt
+  IOT_2020_pxp/satellite/S.txt
+  IOT_2020_pxp/satellite/S_Y.txt
+  IOT_2020_pxp/satellite/file_parameters.json
+  IOT_2020_pxp/satellite/unit.txt
+  IOT_2020_pxp/unit.txt
+  IOT_2020_pxp/x.txt
+  MRSUT_2020/final_demand.csv
+  MRSUT_2020/meta.json
+  MRSUT_2020/supply.csv
+  MRSUT_2020/use.csv
+  MRSUT_2020/value_added.csv

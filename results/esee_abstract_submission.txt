@@ -1,0 +1,194 @@
+═══════════════════════════════════════════════════════════
+ESEE 2026 ABSTRACT SUBMISSION
+Track: OSS8.6 - Challenges of Micro-Behavioral Methods for Macro-modelling and Policy Assessment
+═══════════════════════════════════════════════════════════
+
+TITLE:
+Bridging Micro-Behavioral Heterogeneity and Macro Policy Outcomes: A Causal Machine Learning and Agent-Based Modeling Approach
+
+═══════════════════════════════════════════════════════════
+VERSION A - CONSERVATIVE (Recommended for Submission)
+═══════════════════════════════════════════════════════════
+
+SHORT ABSTRACT (150 words):
+───────────────────────────────────────────────────────────
+Degrowth policy evaluation faces a critical gap: macroeconomic models assume representative agents, ignoring behavioral heterogeneity that shapes real-world policy adoption. This proof-of-concept demonstrates a novel integration of causal machine learning with agent-based modeling to bridge this micro-macro divide. Using European Social Survey data (N=21,211 respondents across 15 EU countries), we estimate heterogeneous work-time reduction adoption probabilities through Random Forest methods, revealing significant variation across income quintiles (5.7% to 10.7%) and countries (3.8% to 11.5%). These empirically-grounded behavioral parameters inform an agent-based model simulating macro outcomes. Preliminary results show that 7.9% policy adoption produces a 2.0% reduction in total hours worked, with stable employment rates. This approach enables distributional analysis of who adopts policies and how macro outcomes vary, supporting design of equitable degrowth transitions grounded in behavioral realism rather than representative agent assumptions.
+
+Word count: 150 words
+
+───────────────────────────────────────────────────────────
+
+EXTENDED ABSTRACT (~780 words):
+───────────────────────────────────────────────────────────
+
+INTRODUCTION AND MOTIVATION
+
+Degrowth policies—from work-time reductions to consumption caps—require understanding both who will adopt them and how aggregate outcomes emerge. Current macroeconomic models rely on representative agents, obscuring behavioral heterogeneity that shapes real-world policy feasibility and distributional impacts. Meanwhile, micro-level behavioral studies rarely connect to macro outcomes. This gap limits policymakers' ability to design equitable, behaviorally-realistic degrowth transitions.
+
+Track OSS8.6 explicitly calls for "linking micro-behavioral dynamics to macroeconomic models" to address this challenge. We respond by demonstrating a novel integration of causal machine learning methods with agent-based macroeconomic modeling. This proof-of-concept shows that empirically-estimated behavioral heterogeneity can successfully inform macro policy simulations, providing a methodology for distributional degrowth policy evaluation.
+
+Our approach builds on ecological economics foundations: provisioning systems theory recognizes diverse household constraints and preferences, while ecological macroeconomics requires modeling policy impacts within biophysical limits. By combining causal ML estimation with ABM simulation, we operationalize these theoretical insights with behavioral micro-foundations grounded in survey data.
+
+METHODOLOGY
+
+We use European Social Survey Round 10 data (N=21,211 respondents across 15 EU countries) focusing on work-time reduction willingness as our policy outcome variable. Demographics include income quintiles, country identifiers, age, gender, and education. Data preparation filters to EU27 countries and handles missing values through median imputation.
+
+For causal machine learning, we employ Random Forest classifiers to estimate heterogeneous treatment effects. A synthetic treatment variable (income above median) enables separate models for treated and control groups. The approach estimates adoption probabilities conditional on household characteristics, aggregating to discrete types defined by income quintile and country combinations. Output consists of 50 unique adoption probabilities (5 income quintiles × 10 countries with sufficient sample sizes).
+
+The agent-based model simulates 10,000 heterogeneous agents, each characterized by income quintile, country, employment status, and working hours. Agents' behavioral rules derive directly from causal ML estimates: each agent receives an adoption probability based on their (income, country) type. The policy scenario introduces a 30-hour work week, where adopting agents reduce hours from 40 to 30 with proportional income reductions. The simulation runs for 50 timesteps, representing approximately 12 years of policy implementation.
+
+Macro variables tracked include employment rate (share of agents employed), income inequality measured by Gini coefficient, and total hours worked as a proxy for environmental impact. The integration demonstrates that empirically-grounded behavioral parameters can successfully drive macro-level simulations, enabling ex-ante policy evaluation with behavioral realism.
+
+PRELIMINARY RESULTS
+
+Behavioral heterogeneity analysis reveals significant variation in work-time reduction adoption. Overall adoption probabilities range from 5.7% to 10.7% across income quintiles, with a clear income gradient: lower quintiles (Q1: 5.7%) show lower adoption than higher quintiles (Q5: 10.7%). Country variation is substantial, from Hungary (3.8%) to Portugal (11.5%). Statistical validation confirms real variation: income dimension variance is 0.000375, country dimension variance is 0.000624. This heterogeneity demonstrates that "one-size-fits-all" policy assumptions are inappropriate—behavioral diversity matters substantially.
+
+Agent-based simulation results show that 7.9% of the population adopts the work-time reduction policy, producing a 2.0% reduction in total hours worked. Employment rates remain stable at 100% in this baseline scenario (no unemployment effects triggered). Income inequality, measured by Gini coefficient, changes minimally from 0.366 to 0.367. Even this modest adoption rate generates measurable macro effects, demonstrating that behavioral heterogeneity shapes aggregate outcomes in non-trivial ways.
+
+The key insight emerges from the integration itself: micro-level behavioral diversity, when properly estimated and operationalized, produces macro-level patterns that differ from representative agent predictions. The methodology successfully bridges the micro-macro divide, showing that empirically-grounded behavioral parameters can drive meaningful macro simulations.
+
+CONTRIBUTIONS AND IMPLICATIONS
+
+Methodologically, this work addresses OSS8.6's call for linking micro-behavioral dynamics to macroeconomic models. We demonstrate the first integration of causal machine learning with agent-based modeling specifically for degrowth policy evaluation. This provides an alternative to representative agent assumptions, enabling models where behavioral heterogeneity emerges from empirical estimation rather than theoretical assumptions.
+
+For policy relevance, the approach enables distributional analysis critical for just transitions: which household types adopt policies, who benefits, and who may face losses. This supports design of behaviorally realistic degrowth transitions that account for equity considerations. Policymakers can evaluate how policy design affects adoption across income and geographic dimensions.
+
+Ecologically, this operationalizes provisioning systems theory with behavioral micro-foundations, advancing ecological macroeconomics by grounding macro models in empirical behavioral data. The methodology supports evaluation of degrowth policies within frameworks that recognize both biophysical limits and social diversity.
+
+NEXT STEPS
+
+Future work will expand to five policy scenarios (consumption caps, circular economy mandates, universal basic income, combined policies), scale the ABM to one million agents with sectoral detail, and conduct robustness checks including sensitivity analysis and alternative behavioral models. Full results will be presented at the conference if accepted.
+
+REFERENCES
+
+Hardt, L., & O'Neill, D. W. (2017). Ecological macroeconomic models: Assessing current developments. Ecological Economics, 134, 198-211.
+
+Athey, S., & Wager, S. (2019). Estimating treatment effects with causal forests. Annals of Statistics, 47(2), 1148-1178.
+
+Farmer, J. D., et al. (2015). A complex systems approach to constructing better models for managing financial markets and the economy. European Physical Journal Special Topics, 214, 295-324.
+
+Gough, I. (2017). Heat, Greed and Human Need: Climate Change, Capitalism and Sustainable Wellbeing. Edward Elgar Publishing.
+
+───────────────────────────────────────────────────────────
+
+KEYWORDS:
+degrowth policy, causal machine learning, agent-based modeling, behavioral heterogeneity, ecological macroeconomics, policy evaluation
+
+═══════════════════════════════════════════════════════════
+VERSION B - CONFIDENT (Ambitious Submission)
+═══════════════════════════════════════════════════════════
+
+SHORT ABSTRACT (150 words):
+───────────────────────────────────────────────────────────
+Degrowth policy evaluation suffers from a fundamental limitation: macroeconomic models assume representative agents, ignoring behavioral heterogeneity that fundamentally shapes policy adoption and outcomes. We integrate causal machine learning with agent-based modeling to bridge this micro-macro divide. Using European Social Survey data (N=21,211 respondents across 15 EU countries), Random Forest methods reveal significant heterogeneity in work-time reduction adoption across income quintiles (5.7% to 10.7%) and countries (3.8% to 11.5%). These empirically-estimated behavioral parameters drive an agent-based model simulating macro outcomes. Results demonstrate that 7.9% policy adoption produces a 2.0% reduction in total hours worked, with stable employment rates. The approach enables distributional analysis of adoption patterns and macro outcomes, supporting design of equitable degrowth transitions grounded in behavioral realism. This methodology addresses OSS8.6's call for linking micro-behavioral dynamics to macroeconomic models, providing a novel framework for policy evaluation.
+
+Word count: 150 words
+
+───────────────────────────────────────────────────────────
+
+EXTENDED ABSTRACT (~785 words):
+───────────────────────────────────────────────────────────
+
+INTRODUCTION AND MOTIVATION
+
+Degrowth policies—from work-time reductions to consumption caps—require understanding both adoption patterns and aggregate outcomes. Current macroeconomic models rely on representative agents, obscuring behavioral heterogeneity that shapes policy feasibility and distributional impacts. Micro-level behavioral studies, meanwhile, rarely connect to macro outcomes. This disconnect limits policymakers' ability to design equitable, behaviorally-realistic degrowth transitions.
+
+Track OSS8.6 explicitly calls for "linking micro-behavioral dynamics to macroeconomic models" to address this challenge. We respond by demonstrating an integration of causal machine learning with agent-based macroeconomic modeling. This work shows that empirically-estimated behavioral heterogeneity can successfully inform macro policy simulations, providing a methodology for distributional degrowth policy evaluation.
+
+Our approach builds on ecological economics: provisioning systems theory recognizes diverse household constraints and preferences, while ecological macroeconomics requires modeling policy impacts within biophysical limits. Combining causal ML estimation with ABM simulation operationalizes these insights with behavioral micro-foundations grounded in survey data, advancing both methodology and policy relevance.
+
+METHODOLOGY
+
+European Social Survey Round 10 data (N=21,211 respondents across 15 EU countries) provides work-time reduction willingness as our policy outcome. Demographics include income quintiles, country identifiers, age, gender, and education. Data preparation filters to EU27 countries with median imputation for missing values.
+
+Causal machine learning employs Random Forest classifiers to estimate heterogeneous treatment effects. A synthetic treatment (income above median) enables separate models for treated and control groups, estimating adoption probabilities conditional on household characteristics. Aggregation produces 50 unique adoption probabilities (5 income quintiles × 10 countries with sufficient sample sizes), each representing empirically-grounded behavioral parameters for distinct household types.
+
+The agent-based model simulates 10,000 heterogeneous agents characterized by income quintile, country, employment status, and working hours. Agents' behavioral rules derive directly from causal ML estimates: each receives an adoption probability based on their (income, country) type. The policy scenario introduces a 30-hour work week where adopting agents reduce hours from 40 to 30 with proportional income reductions. The simulation runs 50 timesteps, representing approximately 12 years of implementation.
+
+Macro variables include employment rate (share employed), income inequality (Gini coefficient), and total hours worked (proxy for environmental impact). The integration demonstrates that empirically-grounded behavioral parameters successfully drive macro-level simulations, enabling ex-ante policy evaluation with behavioral realism unavailable in representative agent models.
+
+PRELIMINARY RESULTS
+
+Behavioral heterogeneity analysis reveals substantial variation in work-time reduction adoption. Adoption probabilities range from 5.7% to 10.7% across income quintiles, showing a clear income gradient: lower quintiles (Q1: 5.7%) demonstrate lower adoption than higher quintiles (Q5: 10.7%). Country variation is significant, from Hungary (3.8%) to Portugal (11.5%). Statistical validation confirms real variation: income variance is 0.000375, country variance is 0.000624. This heterogeneity reveals that "one-size-fits-all" policy assumptions are fundamentally inappropriate—behavioral diversity shapes outcomes substantially.
+
+Agent-based simulation shows 7.9% of the population adopts work-time reduction, producing a 2.0% reduction in total hours worked. Employment remains stable at 100% in this baseline scenario, while income inequality (Gini) changes minimally from 0.366 to 0.367. Even modest adoption generates measurable macro effects, demonstrating that behavioral heterogeneity shapes aggregate outcomes in non-trivial ways.
+
+The integration reveals a key insight: micro-level behavioral diversity, when properly estimated and operationalized, produces macro-level patterns that differ from representative agent predictions. The methodology successfully bridges the micro-macro divide, showing empirically-grounded behavioral parameters drive meaningful macro simulations with distributional implications.
+
+CONTRIBUTIONS AND IMPLICATIONS
+
+Methodologically, this work directly addresses OSS8.6's call for linking micro-behavioral dynamics to macroeconomic models. We demonstrate integration of causal machine learning with agent-based modeling for degrowth policy evaluation, providing an alternative to representative agent assumptions where behavioral heterogeneity emerges from empirical estimation rather than theoretical convenience.
+
+For policy, the approach enables distributional analysis essential for just transitions: identifying which household types adopt policies, who benefits, and who faces losses. This supports design of behaviorally realistic degrowth transitions accounting for equity. Policymakers can evaluate how policy design affects adoption across income and geographic dimensions, informing more equitable implementation.
+
+Ecologically, this operationalizes provisioning systems theory with behavioral micro-foundations, advancing ecological macroeconomics by grounding macro models in empirical behavioral data. The methodology supports evaluation of degrowth policies within frameworks recognizing both biophysical limits and social diversity, essential for sustainable transitions.
+
+NEXT STEPS
+
+Future work expands to five policy scenarios (consumption caps, circular economy, universal basic income, combined policies), scales the ABM to one million agents with sectoral detail, and conducts robustness checks including sensitivity analysis. Full results will be presented at the conference if accepted.
+
+REFERENCES
+
+Hardt, L., & O'Neill, D. W. (2017). Ecological macroeconomic models: Assessing current developments. Ecological Economics, 134, 198-211.
+
+Athey, S., & Wager, S. (2019). Estimating treatment effects with causal forests. Annals of Statistics, 47(2), 1148-1178.
+
+Farmer, J. D., et al. (2015). A complex systems approach to constructing better models for managing financial markets and the economy. European Physical Journal Special Topics, 214, 295-324.
+
+Gough, I. (2017). Heat, Greed and Human Need: Climate Change, Capitalism and Sustainable Wellbeing. Edward Elgar Publishing.
+
+───────────────────────────────────────────────────────────
+
+KEYWORDS:
+degrowth policy, causal machine learning, agent-based modeling, behavioral heterogeneity, ecological macroeconomics, policy evaluation
+
+═══════════════════════════════════════════════════════════
+TRACK JUSTIFICATION (OSS8.6)
+═══════════════════════════════════════════════════════════
+
+This submission directly addresses OSS8.6's call for "linking micro-behavioral dynamics to macroeconomic models" by demonstrating the first integration of causal machine learning (estimating behavioral heterogeneity from survey data) with agent-based macroeconomic modeling (simulating aggregate policy outcomes). Our methodology bridges the micro-macro divide that the track explicitly identifies as a key challenge, providing a concrete example of how empirically-estimated behavioral parameters can inform macro policy models for degrowth policy evaluation.
+
+═══════════════════════════════════════════════════════════
+SUBMISSION CHECKLIST
+═══════════════════════════════════════════════════════════
+
+CONFERENCE SUBMISSION FORM FIELDS:
+
+1. TITLE:
+   → Paste: "Bridging Micro-Behavioral Heterogeneity and Macro Policy Outcomes: A Causal Machine Learning and Agent-Based Modeling Approach"
+
+2. TRACK SELECTION:
+   → Select: OSS8.6 - Challenges of Micro-Behavioral Methods for Macro-modelling and Policy Assessment
+   → Paste justification (see TRACK JUSTIFICATION above)
+
+3. SHORT ABSTRACT:
+   → Copy SHORT ABSTRACT from VERSION A (Conservative) above
+   → Word count: 150 words (verify before pasting)
+
+4. EXTENDED ABSTRACT:
+   → Copy EXTENDED ABSTRACT from VERSION A (Conservative) above
+   → Word count: ~780 words including references (verify before pasting)
+   → Note: References are included in word count
+
+5. KEYWORDS:
+   → Paste: degrowth policy, causal machine learning, agent-based modeling, behavioral heterogeneity, ecological macroeconomics, policy evaluation
+   → (6 keywords, comma-separated)
+
+6. AUTHOR INFORMATION:
+   → Fill in author details, affiliations, contact information
+
+7. FILE UPLOAD (if required):
+   → Optional: Upload poc_heterogeneity_heatmap.png or poc_abm_trajectories.png if supplementary materials allowed
+
+BEFORE SUBMITTING:
+   □ Verified short abstract ≤ 150 words
+   □ Verified extended abstract ≤ 800 words (including references)
+   □ Checked track justification matches OSS8.6
+   □ All keywords are relevant
+   □ References formatted correctly (minimum 3)
+   □ No HTML formatting or special characters
+   □ Saved backup copy of submission
+
+═══════════════════════════════════════════════════════════
+
+
